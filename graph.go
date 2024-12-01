@@ -8,7 +8,7 @@ import (
 )
 
 type Server struct {
-	accounClient  *account.Client
+	accountClient *account.Client
 	catalogClient *catalog.Client
 	orderClient   *order.Client
 }

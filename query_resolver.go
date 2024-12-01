@@ -15,7 +15,7 @@ func (r *queryResolver) Accounts(ctx context.Context, pagination *PaginationInpu
 	defer cancel()
 
 	if id != nil {
-		r, err := r.server.accounClient.GetAccount(ctx, *id)
+		r, err := r.server.accountClient.GetAccount(ctx, *id)
 		if err != nil {
 			log.Println(err)
 			return nil, err
@@ -30,7 +30,7 @@ func (r *queryResolver) Accounts(ctx context.Context, pagination *PaginationInpu
 	if pagination != nil {
 		skip, take = pagination.bounds()
 	}
-	accountList, err := r.server.accounClient.GetAccounts(ctx, skip, take)
+	accountList, err := r.server.accountClient.GetAccounts(ctx, skip, take)
 	if err != nil {
 		log.Fatal(err)
 		return nil, err

@@ -21,7 +21,7 @@ func (r *mutationResolver) CreateAccount(ctx context.Context, in AccountInput) (
 	ctx, cancel := context.WithTimeout(ctx, 3*time.Second)
 	defer cancel()
 
-	a, err := r.server.accounClient.PostAccount(ctx, in.Name)
+	a, err := r.server.accountClient.PostAccount(ctx, in.Name)
 	if err != nil {
 		log.Println(err)
 		return nil, err
