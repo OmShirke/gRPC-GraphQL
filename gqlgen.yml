@@ -1,0 +1,8 @@
+schema: schema.graphql
+
+models:
+  Account:
+    model: github.com/OmShirke/gRPC-GraphQL/graphql.Account
+    fields:
+      orders:
+        resolver: true
