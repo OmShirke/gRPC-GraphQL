@@ -2,7 +2,7 @@ schema: schema.graphql
 
 models:
   Account:
-    model: github.com/OmShirke/gRPC-GraphQL/graphql.Account
+    model: github.com/OmShirke/gRPC-GraphQL.Account
     fields:
       orders:
         resolver: true

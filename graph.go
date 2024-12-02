@@ -13,7 +13,7 @@ type Server struct {
 	orderClient   *order.Client
 }
 
-func NewGraphQLServer(accountUrl, catalogUrl, orderUrl string) (*Server, error) {
+func NewGraphQLServer(accountUrl string, catalogUrl string, orderUrl string) (*Server, error) {
 	accountClient, err := account.NewClient(accountUrl)
 
 	if err != nil {
